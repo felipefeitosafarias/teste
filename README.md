@@ -1,44 +1,58 @@
+# ---------------------- FASE 01 ----------------------
+
+- criar banco de dados, copiando os scripts que estÃ£o dentro do sql.txt
+
 # ---------------------- FASE 02 ----------------------
-# Refinamento para Futuras Implementações ou Melhorias
+
+# Refinamento para Futuras Implementaï¿½ï¿½es ou Melhorias
 
 ## 1. Requisitos Adicionais
-- Há algum requisito adicional que não foi abordado nas fases anteriores, mas que é essencial para a funcionalidade do sistema?
-- Existem novas funcionalidades ou aprimoramentos que os usuários finais expressaram interesse em ter?
+
+- Hï¿½ algum requisito adicional que nï¿½o foi abordado nas fases anteriores, mas que ï¿½ essencial para a funcionalidade do sistema?
+- Existem novas funcionalidades ou aprimoramentos que os usuï¿½rios finais expressaram interesse em ter?
 
 ## 2. Desempenho e Escalabilidade
-- Como o sistema deverá lidar com um aumento significativo no número de usuários, projetos e tarefas?
-- Existem requisitos específicos de desempenho que precisam ser considerados para garantir uma resposta rápida da aplicação?
 
-## 3. Segurança
-- Quais medidas de segurança são necessárias para proteger dados sensíveis, como informações de usuário, detalhes do projeto e histórico de alterações?
-- É necessário implementar autenticação ou autorização adicionais?
+- Como o sistema deverï¿½ lidar com um aumento significativo no nï¿½mero de usuï¿½rios, projetos e tarefas?
+- Existem requisitos especï¿½ficos de desempenho que precisam ser considerados para garantir uma resposta rï¿½pida da aplicaï¿½ï¿½o?
 
-## 4. Integrações
-- Existe a necessidade de integrações com outras ferramentas ou serviços externos?
-- Há APIs específicas que precisam ser suportadas para permitir integrações eficientes?
+## 3. Seguranï¿½a
 
-## 5. Usabilidade e Experiência do Usuário
-- Como podemos aprimorar a experiência do usuário na aplicação?
-- Existem fluxos de trabalho ou interações que podem ser otimizados para facilitar o uso?
+- Quais medidas de seguranï¿½a sï¿½o necessï¿½rias para proteger dados sensï¿½veis, como informaï¿½ï¿½es de usuï¿½rio, detalhes do projeto e histï¿½rico de alteraï¿½ï¿½es?
+- ï¿½ necessï¿½rio implementar autenticaï¿½ï¿½o ou autorizaï¿½ï¿½o adicionais?
 
-## 6. Feedback dos Usuários
-- Qual foi o feedback dos usuários durante a fase inicial de implementação?
-- Existem áreas específicas que os usuários consideram confusas ou que precisam de melhorias?
+## 4. Integraï¿½ï¿½es
 
-## 7. Manutenção e Evolução Contínua
-- Como será a manutenção contínua do sistema após a implementação inicial?
-- Há uma visão clara sobre como o sistema evoluirá ao longo do tempo para atender às necessidades em constante mudança?
+- Existe a necessidade de integraï¿½ï¿½es com outras ferramentas ou serviï¿½os externos?
+- Hï¿½ APIs especï¿½ficas que precisam ser suportadas para permitir integraï¿½ï¿½es eficientes?
+
+## 5. Usabilidade e Experiï¿½ncia do Usuï¿½rio
+
+- Como podemos aprimorar a experiï¿½ncia do usuï¿½rio na aplicaï¿½ï¿½o?
+- Existem fluxos de trabalho ou interaï¿½ï¿½es que podem ser otimizados para facilitar o uso?
+
+## 6. Feedback dos Usuï¿½rios
+
+- Qual foi o feedback dos usuï¿½rios durante a fase inicial de implementaï¿½ï¿½o?
+- Existem ï¿½reas especï¿½ficas que os usuï¿½rios consideram confusas ou que precisam de melhorias?
+
+## 7. Manutenï¿½ï¿½o e Evoluï¿½ï¿½o Contï¿½nua
+
+- Como serï¿½ a manutenï¿½ï¿½o contï¿½nua do sistema apï¿½s a implementaï¿½ï¿½o inicial?
+- Hï¿½ uma visï¿½o clara sobre como o sistema evoluirï¿½ ao longo do tempo para atender ï¿½s necessidades em constante mudanï¿½a?
 
 ## 8. Testes e Qualidade de Software
-- Quais são as estratégias de teste planejadas para garantir a qualidade do software?
-- Existem cenários de teste específicos que devem ser considerados para garantir a estabilidade do sistema?
 
-## 9. Documentação
-- Quais são as necessidades de documentação para desenvolvedores, usuários finais e administradores do sistema?
-- É necessário criar documentação adicional para facilitar futuras implementações ou manutenções?
+- Quais sï¿½o as estratï¿½gias de teste planejadas para garantir a qualidade do software?
+- Existem cenï¿½rios de teste especï¿½ficos que devem ser considerados para garantir a estabilidade do sistema?
 
+## 9. Documentaï¿½ï¿½o
+
+- Quais sï¿½o as necessidades de documentaï¿½ï¿½o para desenvolvedores, usuï¿½rios finais e administradores do sistema?
+- ï¿½ necessï¿½rio criar documentaï¿½ï¿½o adicional para facilitar futuras implementaï¿½ï¿½es ou manutenï¿½ï¿½es?
 
 # ---------------------- FASE 03 ----------------------
+
 - Avaliaria hospedar na AWS para termos escalabilidade.
 - Fazer testes Automatizados.
 - Monitoramento e Logging.

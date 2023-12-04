@@ -1,0 +1,67 @@
+-- Criação da tabela de Usuários
+CREATE TABLE Usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL
+);
+
+-- Criação da tabela de Projetos
+CREATE TABLE Projeto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id),
+    CONSTRAINT fk_usuario_projeto FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+);
+
+-- Criação da tabela de Tarefas
+CREATE TABLE Tarefa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    data_vencimento DATE,
+    status ENUM('pendente', 'em_andamento', 'concluida') DEFAULT 'pendente',
+    prioridade ENUM('baixa', 'media', 'alta') NOT NULL,
+    projeto_id INT,
+    FOREIGN KEY (projeto_id) REFERENCES Projeto(id),
+    CONSTRAINT fk_projeto_tarefa FOREIGN KEY (projeto_id) REFERENCES Projeto(id)
+);
+
+-- Criação da tabela de Histórico de Atualizações
+CREATE TABLE HistoricoAtualizacao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tarefa_id INT,
+    campo_modificado VARCHAR(50) NOT NULL,
+    valor_anterior TEXT,
+    valor_atual TEXT,
+    data_modificacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    usuario_id INT,
+    FOREIGN KEY (tarefa_id) REFERENCES Tarefa(id),
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id),
+    CONSTRAINT fk_tarefa_historico FOREIGN KEY (tarefa_id) REFERENCES Tarefa(id),
+    CONSTRAINT fk_usuario_historico FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+);
+
+-- Criação da tabela de Comentários
+CREATE TABLE Comentario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    texto TEXT NOT NULL,
+    tarefa_id INT,
+    usuario_id INT,
+    data_comentario TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (tarefa_id) REFERENCES Tarefa(id),
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id),
+    CONSTRAINT fk_tarefa_comentario FOREIGN KEY (tarefa_id) REFERENCES Tarefa(id),
+    CONSTRAINT fk_usuario_comentario FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+);
+
+-- Criação da tabela de Relatórios de Desempenho
+CREATE TABLE RelatorioDesempenho (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    numero_medio_tarefas_concluidas DECIMAL(5,2),
+    data_relatorio DATE,
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id),
+    CONSTRAINT fk_usuario_relatorio FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+);
